@@ -91,4 +91,4 @@
 	ctrl+u ===>> Erase the whole line
 	ctrl+r ===>> Type to bring up a recent command
 	!! ===>> Repeats the last command
-	exit ===>> Logout the current session  	
+	exit ===>> Logout the current session
