@@ -7,10 +7,14 @@
 	ls -lt ===>> Sorting the formatted listing by time modification
 	cd dir ===>> Change directory to dir
 	cd ===>> Change to home directory
+	cd .. ===>> back to last directory
+	cd - ===>> back to last directory you had been
+	cd ===>> back to home directory
+	cd ~ ===>> back to home directory
 	pwd ===>> show current working directory
 	mkdir dir ===>> Creating a directory dir
-	cat > file ===>> Places the standard input into the file
 	more file ===>> Output the contents of the file
+	less file ===>> output the contents of the file
 	head file ===>> Output the first 10 lines of the file
 	tail file ===>> Output the last 10 lines of the file
 	tail -f file ===>> Output the contents of file as it grows,starting with the last 10 lines
@@ -35,6 +39,20 @@
 ## System info  
 
 	date ===>> Show the current date and time
+	date +%s ===>> show more about time
+	cat > file ===>> Places the standard input into the file
+	cat /proc/cpuinfo ===>> show cpu information
+	cat /proc/meminfo ===>> show memory information
+	cat /proc/filesystem ===>> show all file system linux
+	blkid ===>> show uuid
+	lscpu ===>> more information about cpu
+	lsusb ===>> more information about usb
+	lshw ===>> information about all your hardware
+	lspci ===>> more information about your connectore
+	lsmod ===>> show all modules
+	modeprobe -r (name of modules)===>> remove modules
+	cat /proc/modules ===>> show all modules
+	uuidgen ===>> make a new uuid
 	cal ===>> Show this month's calender
 	uptime ===>> Show current uptime
 	w ===>> Display who is on line
@@ -47,7 +65,12 @@
 	du ===>> Show directory space usage
 	free ===>> Show memory and swap usage
 	whereis app ===>> Show possible location of app
-	which app ===>> Show which application will be run by default  
+	which app ===>> Show which application will be run by default
+	wc -l (name of file) ===>> show how many lines have the file
+	dmesg ===>> show logs when the os is up
+	cat /var/log/syslog ===>> show all logs
+	lsb_release -a ===>> show your os
+	cat /etc/os-release ===>> show your os  
 
 ## Searching  
 
@@ -76,6 +99,8 @@
 ## Network  
 
 	ping host ===>> Ping host and output results
+	ping -c 4 8.8.8.8
+	dhclient ===>> take ip from dhcp
 	whois domain ===>> Get whois information for domains
 	dig domain ===>> Get DNS information for domain
 	dig -x host ===>> Reverse lookup host
