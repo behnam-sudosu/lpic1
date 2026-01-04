@@ -106,7 +106,10 @@
  	ldd ===>> show your dependency
  		ld.so.conf
  			*.conf
- 		ld.so.cash  
+ 		ld.so.cash
+	runlevel ===>> show runlevel
+	telinit 5 ===>> change runlevel
+	init 5
 
 ## make variable  
 
