@@ -101,12 +101,14 @@
 	pgrep (name program) ===>> find process id
 	which ls
  	whereis ls
- 	echo $PATH
+ 	echo $PATH ===>> show your path
 	echo $? ===>> 0 = means correct, 1 = means incorect
  	ldd ===>> show your dependency
- 		ld.so.conf
- 			*.conf
- 		ld.so.cash  
+	ldd /usr/bin/ls ===>> share library
+ 		/etc/ld.so.conf
+ 			/etc/ld.so.conf.d/*.conf
+ 		/etc/ld.so.cash
+	ldconfig -v  
 
 ## shutdown & reboot commands  
 	runlevel ===>> show runlevel
@@ -254,7 +256,7 @@
 	wall ===>> send massage to other user
 	nc -l 8990 ===>> port you can talk (net cat)
 	nc 8990 (ip destination)
-	log = auditd
+	auditd = log 
 	var/log/wtmp ===>> how type reboot
 
 
