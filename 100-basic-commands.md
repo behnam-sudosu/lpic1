@@ -106,10 +106,12 @@
  	ldd ===>> show your dependency
  		ld.so.conf
  			*.conf
- 		ld.so.cash
+ 		ld.so.cash  
+
+## shutdown & reboot commands  
 	runlevel ===>> show runlevel
 	telinit 5 ===>> change runlevel
-	init 5
+	init 5  
 
 ## make variable  
 
@@ -248,6 +250,11 @@
 	modifytime
 	changetime
 		stat file1 ===>> show all
-	tee ===>> show on scren  
+	tee ===>> show on scren
+	wall ===>> send massage to other user
+	nc -l 8990 ===>> port you can talk (net cat)
+	nc 8990 (ip destination)
+	log = auditd
+	var/log/wtmp ===>> how type reboot
 
 
