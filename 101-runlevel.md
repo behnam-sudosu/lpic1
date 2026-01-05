@@ -1,7 +1,4 @@
-runlevel
-
-
-
+## runlevel
 	runlevel						debian						redhat
 	
 	    0	|						halt			   |  		halt
@@ -18,10 +15,13 @@ runlevel
 	    
 	    6   |              		    reboot             |        reboot
 	    
-	    runlevel
-	    telinit 5
-	    init 5
-	    etc/default/grub ===>> change grub
-	    etc/RC ===>> set runlevel with link
-	    etc/init.d ===>> set runlevel
-	    ./lvm start
+	runlevel
+	telinit 5
+	init 5
+	etc/default/grub ===>> change grub
+	etc/rc ===>> set runlevel with link
+	etc/init.d ===>> set runlevel
+		s ===>> start
+		k ===>> kill
+	./lvm start ===>> you can stop, start, reload, enable, disable
+	
