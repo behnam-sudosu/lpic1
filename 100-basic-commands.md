@@ -56,14 +56,16 @@
 	kill -9 (process ID)
 	pkill (name)  
 
-## System info  
-
-	date ===>> Show the current date and time
-	date +%s ===>> show more about time
+## cat commands  
 	cat file ===>> show file text
 	cat -n file ===>> show number 
 	cat > file3 ===>> write in this file
- 		ctrl + d ===>> go out side the file
+		ctrl + d ===>> go out side the file
+
+## System info  
+
+	date ===>> Show the current date and time
+	date +%s ===>> show more about time	
 	cat /proc/cpuinfo ===>> show cpu information
 	cat /proc/meminfo ===>> show memory information
 	cat /proc/filesystem ===>> show all file system linux
@@ -76,9 +78,7 @@
 	lsmod ===>> show all modules
 	modeprobe -r (name of modules)===>> remove modules
 	cat /proc/modules ===>> show all modules
-	uuid ===>> universal uniq ID
-	uuidgen ===>> make a new uuid 
-	cal ===>> Show this month's calender
+	
 	uptime ===>> Show current uptime
 	w ===>> Display who is on line
 	whoami ===>> Who you are logged in as
@@ -109,9 +109,18 @@
  		/etc/ld.so.conf
  			/etc/ld.so.conf.d/*.conf
  		/etc/ld.so.cash
-	ldconfig -v  
+	ldconfig -v
+	lsblk ===>> show all disk
+	grub-mkconfig  
+
+## lvm commands
+
+	pvdisplay
+	vgdisplay
+	lvdisplay
 
 ## shutdown & reboot commands  
+
 	runlevel ===>> show runlevel
 	telinit 5 ===>> change runlevel
 	init 5  
@@ -235,7 +244,7 @@
 	dd if=/dev/sda of=/dev/sdb
 	dd if=/dev/zero of=/root/zerofile bs=1M count=1
 
-## shutdown & reboot
+## shutdown & reboot  
 	shutdown
 	shutdown -P ===>> poweroff
 	shutdown -h ===>> halt
@@ -252,7 +261,7 @@
 	halt -p
 	halt -f
 	telinit 6
-	init
+	init  
 
 ## other commands  
 
@@ -280,5 +289,7 @@
 	var/log/wtmp ===>> how type reboot
 	chmem -e 1G ===>> use memory
 	chmem -d 1G ===>> delete memry in use
+	uuid ===>> universal uniq ID
+	uuidgen ===>> make a new uuid 
 
 
