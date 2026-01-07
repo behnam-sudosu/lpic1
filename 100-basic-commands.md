@@ -71,6 +71,7 @@
 	lscpu ===>> more information about cpu
 	lsusb ===>> more information about usb
 	lshw ===>> information about all your hardware
+	lsmem ===>> more information about memory
 	lspci ===>> more information about your connectore
 	lsmod ===>> show all modules
 	modeprobe -r (name of modules)===>> remove modules
@@ -232,7 +233,26 @@
 ## dd commands  
 
 	dd if=/dev/sda of=/dev/sdb
-	dd if=/dev/zero of=/root/zerofile bs=1M count=1  
+	dd if=/dev/zero of=/root/zerofile bs=1M count=1
+
+## shutdown & reboot
+	shutdown
+	shutdown -P ===>> poweroff
+	shutdown -h ===>> halt
+	shutdown -r ===>> reboot
+	shutdown -c ===>> cancel
+	shutdown -r now
+	shutdown -r 13:15 
+	shutdown -P +15
+	reboot -p ===>> poweroff
+	reboot -f ===>> force
+	poweroff -P ===>> shutdown
+	poweroff -f ===>> force
+	/var/log/wtmp ===>> show who reboot the server
+	halt -p
+	halt -f
+	telinit 6
+	init
 
 ## other commands  
 
@@ -258,5 +278,7 @@
 	nc 8990 (ip destination)
 	auditd = log 
 	var/log/wtmp ===>> how type reboot
+	chmem -e 1G ===>> use memory
+	chmem -d 1G ===>> delete memry in use
 
 
