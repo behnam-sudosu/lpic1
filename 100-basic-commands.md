@@ -3,9 +3,11 @@
 ## File Commands  
 
 	ls ===>> Directory listing
+	ls -1 ===>> show vertical
 	ls -al ===>> Formatted listing with hidden files
 	ls -lt ===>> Sorting the formatted listing by time modification
 	ls /dev | grep sda ===>> show only sda in ls
+	ls ? ===>> ?=ls one character
 	cd dir ===>> Change directory to dir
 	cd ===>> Change to home directory
 	cd .. ===>> back to last directory
@@ -14,10 +16,13 @@
 	cd ~ ===>> back to home directory
 	pwd ===>> show current working directory
 	mkdir dir ===>> Creating a directory dir
+	mkdir -p ===>> make parents directory
 	more file ===>> Output the contents of the file
 	less file ===>> output the contents of the file
 	head file ===>> Output the first 10 lines of the file
+	head -n 20 ===>> show 20 lines
 	tail file ===>> Output the last 10 lines of the file
+	tail -n 20 ===>> show 20 line
 	tail -f file ===>> Output the contents of file as it grows,starting with the last 10 lines
 	touch file ===>> Create or update file
 	touch file{1..10}.txt ===>> you can make 10 file
@@ -57,6 +62,7 @@
 	pkill (name)  
 
 ## cat commands  
+
 	cat file ===>> show file text
 	cat -n file ===>> show number 
 	cat > file3 ===>> write in this file
@@ -78,7 +84,7 @@
 	lsmod ===>> show all modules
 	modeprobe -r (name of modules)===>> remove modules
 	cat /proc/modules ===>> show all modules
-	
+	file ===>> show your type of file
 	uptime ===>> Show current uptime
 	w ===>> Display who is on line
 	whoami ===>> Who you are logged in as
@@ -102,8 +108,6 @@
 	pgrep (name program) ===>> find process id
 	which ls
  	whereis ls
- 	echo $PATH ===>> show your path
-	echo $? ===>> 0 = means correct, 1 = means incorect
  	ldd ===>> show your dependency
 	ldd /usr/bin/ls ===>> share library
  		/etc/ld.so.conf
@@ -140,7 +144,7 @@
 	grep -r pattern dir ===>> Search recursively for pattern in dir
 	command | grep pattern ===>> Search pattern in the output of a command
 	locate  file ===>> Find all instances of file
-	find . -name ===>> filename Search in the current directory(represented by a period) and below it, for files and directories with names starting with filename
+	with names starting with filename
 	grep pattern ===>> Searches for all the named processes, that matches with the pattern and, by default, returns their ID
 	history
  	history -c ===>> clean
@@ -148,24 +152,22 @@
  	!sudo ===>> execute last command with sudo
  	!cat ===>> execute last command with cat
  	!! ===>> execute last command
-	find . - type f ===>> f = file
-	find . - type f ===>> d = directory
 	tree dir1 ===>> show everything in direcrory  
+
+## find command  
+
+	find . -name ===>> filename Search in the current directory(represented by a period) and below it, for files and directories 
+	###########################
+	find . -size +100M
+	find . -size -100M
+
+
 
 ## File Permission  
 
 	chmod octal file ===>> change the permission of file to octal, which can be found separately for user, group, world by adding, 4-read(r), 2-write(w), 1-execute(x)  
 
-## Compression  
-
-	tar cf file.tar file ===>> Create tar named file.tar containing file
-	tar xf file.tar ===>> Extract the file from file.tar
-	tar czf file.tr.gz files ===>> Create a tar with Gzip compression
-	tar xzf file.tar.gz ===>> Extract a tar using Gzip
-	tar cjf file.tar.bz2 ===>> Create tar with Bzip2 compression
-	tar xjf file.tar.bz2 ===>> Extract a tar using Bzip2
-	gzip file ===>> Compresses file and renames it to file.gz
-	gzip -d file.gz ===>> Decompresses file.gz back to file  
+ 
 
 ## Network  
 
@@ -189,6 +191,8 @@
 	ctrl+w ===>> Erase one word in the current line
 	ctrl+u ===>> Erase the whole line
 	ctrl+r ===>> Type to bring up a recent command
+	!vim ===>> excute last file with vim
+	!! sudo ===>> execute last command in sudo
 	!! ===>> Repeats the last command
 	exit ===>> Logout the current session  
 
@@ -198,17 +202,6 @@
 	swapoff /seap.img
 	swapon /swap.img  
 
-## echo commands  
-
-	echo "Hello world!" ===>> print
-	echo "salam" > file.txt
- 	echo "space" > file.log ===>> you can't delete file with huge size you can rewrite it
-	echo -n ===>> new line
-	echo \# ===>> special character you must put \ 
-	echo -e ===>> -e means you have special character in your text
-	echo \t ===>> tab
-	echo \v ===>> vertical
-	echo \n ===>> line  
 
 ## tr commands  
 
@@ -232,19 +225,25 @@
  		tail -5
  		tail -f /var/log/syslog ===>> open file 
 	tac ssh_config | head -n 4 
-	cut ===>> seprete
-	past ===>> merge two file
-	join ===>> vajhe moshtarak and good for script
-	
-	sed 's/yes/no/g' file1
-	sed -i 's/yes/no/gi' file1 ===>> insert  
+	cut  -d: -f1 ===>> seprete
+	paste file1 file2 ===>> merge two file
+	paste -d: file1 file2 ===>> merge two file with :
+	join ===>> good for script database
+	pr ===>> print
+	fmt -w 3- fiel1 ===>> show in old monitor
+	nl ===>> number
+	split -l 3 file1 ===>> seprate file in line
+	splite -b 1000MB file1 ===>> seprate file in weght
+	yes > file1 ===>> make file
 
-## dd commands  
+## sed command  
 
-	dd if=/dev/sda of=/dev/sdb
-	dd if=/dev/zero of=/root/zerofile bs=1M count=1
+	 
+
+
 
 ## shutdown & reboot  
+
 	shutdown
 	shutdown -P ===>> poweroff
 	shutdown -h ===>> halt
@@ -277,10 +276,10 @@
 	|| ===>> or
  	&& ===>> and
 	nl ===>> number line
+	stat file1 ===>> show all
 	accesstime
 	modifytime
 	changetime
-		stat file1 ===>> show all
 	tee ===>> show on scren
 	wall ===>> send massage to other user
 	nc -l 8990 ===>> port you can talk (net cat)
@@ -291,5 +290,8 @@
 	chmem -d 1G ===>> delete memry in use
 	uuid ===>> universal uniq ID
 	uuidgen ===>> make a new uuid 
-
+	cp ===>> copy file or directory
+	scp ===>> copy file or directory
+	
+	tee ===>> copy file and directory but show everything
 
