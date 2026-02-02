@@ -54,7 +54,7 @@ Jan 04 13:49:24 srv1 systemd[1]: Starting nftables.service - nftables...
 #show logs
 Jan 04 13:49:24 srv1 systemd[1]: Finished nftables.service - nftables...
 
-
+# like systemctl and old sysadmin use this
 service ufw status  
 
 
