@@ -23,6 +23,7 @@
 telinit 5
 init 5
 ```
+
 ## change grub  
 
 /etc/default/grub  
