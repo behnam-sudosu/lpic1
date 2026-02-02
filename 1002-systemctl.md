@@ -56,14 +56,18 @@ systemctl information
 ```bash
 #show where is load  
 Loaded: loaded (/usr/lib/systemd/system/nftables.service; disabled; preset: enabled)  
+
 #memory usage  
 Mem peak: 2.9M  
+
 #cpu usage  
 CPU: 38ms  
+
 #show logs
-Jan 04 13:49:24 srv1 systemd[1]: Starting nftables.service - nftables...
+Jan 04 13:49:24 srv1 systemd[1]: Starting nftables.service - nftables...  
+
 #show logs
-Jan 04 13:49:24 srv1 systemd[1]: Finished nftables.service - nftables...
+Jan 04 13:49:24 srv1 systemd[1]: Finished nftables.service - nftables...  
 ```
 
 like systemctl and old sysadmin use this  
@@ -76,7 +80,7 @@ how type reboot
 
 	var/log/wtmp  
 
-## make file service  
+## make file systemd service for linux
 
 touch file.service  
 
