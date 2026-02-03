@@ -1,18 +1,22 @@
 ## systemctl  
 
-you can set runleve  
+### you can set runleve  
 
 ```bash
 systemctl set-default runlevel  
 ```
 
-you can see your runlevel  
+---  
+
+### you can see your runlevel  
 
 ```bash
 systemctl get-default runlevel  
 ```
 
-start, stop, restart, reload, disable, enable, kill  
+---  
+
+### start, stop, restart, reload, disable, enable, kill  
 
 ```bash
 #is better use systemctl reload ssh  
@@ -24,19 +28,25 @@ systemctl is-active ssh
 systemctl is-enabled ssh  
 ```
 
-install ssh  
+---  
+
+### install ssh  
 
 ```bash
 sudo apt install openssh-server  
 ```
 
-show all services  
+---  
+
+### show all services  
 
 ```bash
 systemctl  
 ```
 
-save systemd file  
+---  
+
+### save systemd file  
 
 ```bash
 #first direction save systemd  
@@ -51,7 +61,9 @@ etc/systemd/system
 	file.service  
 ```
 
-systemctl information
+---  
+
+### systemctl information
 
 ```bash
 #show where is load  
@@ -70,19 +82,23 @@ Jan 04 13:49:24 srv1 systemd[1]: Starting nftables.service - nftables...
 Jan 04 13:49:24 srv1 systemd[1]: Finished nftables.service - nftables...  
 ```
 
-like systemctl and old sysadmin use this  
+---  
+
+### like systemctl and old sysadmin use this  
 
 ```bash
 service ufw status  
 ```
 
-how type reboot  
+---  
+
+### how type reboot  
 
 	var/log/wtmp  
 
 ## make file systemd service for linux
 
-touch file.service  
+### touch file.service  
 
 ```bash
 [Unit]
@@ -107,4 +123,4 @@ ExecStop=/usr/sbin/nft flush ruleset
 WantedBy=sysinit.target
 ```  
 
-save the file
+### save the file
