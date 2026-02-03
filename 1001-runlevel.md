@@ -20,7 +20,7 @@
 
 ---  
 
-### change runlevel
+#### change runlevel
 
 ```bash
 telinit 5
@@ -29,19 +29,19 @@ init 5
 
 ---  
 
-### change grub  
+#### change grub  
 
 	/etc/default/grub  
 
 ---  
 
-### set runlevel with link  
+#### set runlevel with link  
 
 	etc/rc  
 
 ---  
 
-### set runlevel  
+#### set runlevel  
 
 ```bash
 etc/init.d  
@@ -51,6 +51,6 @@ etc/init.d
 
 ---  
 
-### you can stop, start, reload, enable, disable  
+#### you can stop, start, reload, enable, disable  
 
 	/etc/init.d/lvm start  
