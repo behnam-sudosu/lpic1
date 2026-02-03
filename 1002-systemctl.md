@@ -1,6 +1,6 @@
 ## systemctl  
 
-### you can set runleve  
+#### you can set runleve  
 
 ```bash
 systemctl set-default runlevel  
@@ -8,7 +8,7 @@ systemctl set-default runlevel
 
 ---  
 
-### you can see your runlevel  
+#### you can see your runlevel  
 
 ```bash
 systemctl get-default runlevel  
@@ -16,7 +16,7 @@ systemctl get-default runlevel
 
 ---  
 
-### start, stop, restart, reload, disable, enable, kill  
+#### start, stop, restart, reload, disable, enable, kill  
 
 ```bash
 #is better use systemctl reload ssh  
@@ -30,7 +30,7 @@ systemctl is-enabled ssh
 
 ---  
 
-### install ssh  
+#### install ssh  
 
 ```bash
 sudo apt install openssh-server  
@@ -38,7 +38,7 @@ sudo apt install openssh-server
 
 ---  
 
-### show all services  
+#### show all services  
 
 ```bash
 systemctl  
@@ -46,7 +46,7 @@ systemctl
 
 ---  
 
-### save systemd file  
+#### save systemd file  
 
 ```bash
 #first direction save systemd  
@@ -63,7 +63,7 @@ etc/systemd/system
 
 ---  
 
-### systemctl information
+#### systemctl information
 
 ```bash
 #show where is load  
@@ -84,7 +84,7 @@ Jan 04 13:49:24 srv1 systemd[1]: Finished nftables.service - nftables...
 
 ---  
 
-### like systemctl and old sysadmin use this  
+#### like systemctl and old sysadmin use this  
 
 ```bash
 service ufw status  
@@ -92,7 +92,7 @@ service ufw status
 
 ---  
 
-### how type reboot  
+#### how type reboot  
 
 	var/log/wtmp  
 
