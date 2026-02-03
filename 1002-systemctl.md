@@ -21,6 +21,9 @@ systemctl get-default runlevel
 ```bash
 #is better use systemctl reload ssh  
 systemctl restart ssh  
+systemctl stop ssh  
+systemctl reload ssh  
+systemctl start ssh  
 systemctl disable ssh  
 systemctl enable ssh  
 systemctl status ssh  
