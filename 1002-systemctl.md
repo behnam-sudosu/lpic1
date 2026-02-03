@@ -1,4 +1,4 @@
-## systemctl  
+# systemctl  
 
 #### you can set runleve  
 
@@ -96,7 +96,7 @@ service ufw status
 
 	var/log/wtmp  
 
-## make file systemd service for linux
+# make file systemd service for linux
 
 #### touch file.service  
 
