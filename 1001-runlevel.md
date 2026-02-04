@@ -23,7 +23,7 @@
 #### change runlevel
 
 ```bash
-telinit 5
+telinit 5  
 init 5
 ```
 
@@ -32,6 +32,8 @@ init 5
 #### change grub  
 
 	/etc/default/grub  
+	/etc/grub.d
+	/boot/grub/grub.conf  
 
 ---  
 
