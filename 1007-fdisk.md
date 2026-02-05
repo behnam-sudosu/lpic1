@@ -1,40 +1,63 @@
 # fdisk  
 
-lsblk ===>> show disk and partion
-lsblk -f ===>> more details
-blkid ===>> iformation about hard disk uuid
-UUID ===>> universal uniq ID
-uuidgen ===>> generate UUID
-mount ===>> show all mounted	
-	
-## fdisk  
+```bash
+#show disk and partion
+lsblk
 
-	fdisk /dev/sdb ===>> can orginize you disk
-	m ===>> help
-	a ===>> bootable flag
-	b
-	d ===>> delete
-	l ===>> list of partion type
-	p ===>> see partion and print
-	n ===>> new partition
-		p ===>> primary
-		e ===>> extended
-		partition number (default)
-		first sector (default)
-		last sector +2G
-	w ===>> write
-	q ===>> quit
-	g ===>> GPT create
-	
-	t ===>> change partion type
-		partition number
-		L ===>> show Hex code type
-		(83) linux
-		(82) linux swap
-		(8e) linux lvm
-		(fd) linux raid
-		<!-- type hex code -->
-		w ===>> save and exit
+#more details
+lsblk -f
+
+#iformation about hard disk uuid
+blkid
+
+#universal uniq ID
+UUID
+
+#generate UUID
+uuidgen
+
+#show all mounted
+mount
+```
+
+---  
+
+## fdisk command
+
+```bash
+#can orginize you disk
+fdisk /dev/sdb
+```
+
+---  
+
+```bash
+m ===>> help
+a ===>> bootable flag
+b
+d ===>> delete
+l ===>> list of partion type
+p ===>> see partion and print
+n ===>> new partition
+	p ===>> primary
+	e ===>> extended
+	partition number (default)
+	first sector (default)
+	last sector +2G
+w ===>> write
+q ===>> quit
+g ===>> GPT create
+
+t ===>> change partion type
+	partition number
+	L ===>> show Hex code type
+	(83) linux
+	(82) linux swap
+	(8e) linux lvm
+	(fd) linux raid
+	<!-- type hex code -->
+	w ===>> save and exit
+```
 
 ## gdisk  
 
