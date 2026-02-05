@@ -49,7 +49,7 @@ systemctl
 
 ---  
 
-#### save systemd file  
+#### save systemd file directory
 
 ```bash
 #first direction save systemd  
