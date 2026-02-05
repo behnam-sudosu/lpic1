@@ -29,7 +29,7 @@ init 5
 
 ---  
 
-#### change grub  
+#### change and edit grub  
 
 	/etc/default/grub  
 	/etc/grub.d
