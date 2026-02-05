@@ -32,6 +32,8 @@ fdisk /dev/sdb
 ---  
 
 ```bash
+
+
 m ===>> help
 a ===>> bootable flag
 b
