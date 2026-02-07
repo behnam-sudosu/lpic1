@@ -22,7 +22,7 @@ mount
 
 ---  
 
-## fdisk command
+#### fdisk command
 
 ```bash
 #can orginize you disk
@@ -55,44 +55,100 @@ type hex code
 w
 ```
 
-## gdisk  
+---  
 
-	? ===>> help
-        d ===>> delete a partion
-        c ===>> change a partition's name
-        l ===>> list known partition types
-        n ===>> add a new partition
-        p ===>> print the partition table
-        q ===>> quit without saving changes
-        t ===>> change a partion's code
-        w ===>> write table to disk and exit
+### gdisk  
+
+```bash
+#can orginize you disk
+gdisk /dev/sdb
+```
+
+---  
+
+```bash
+#help
+?
+
+#delete a partion
+d
+
+#change a partition's name
+c
+
+#list known partition types
+l
+
+#add a new partition
+n
+
+#print the partition table
+p
+
+#quit without saving changes
+q
+
+#change a partion's code
+t
+
+#write table to disk and exit
+w
+```
 	all command same as fdisk  
 
-## partion type  
+---  
 
-	ext4 ===>> good for desktop
-	xfs ===>> good for server and you have alot of of in small size
-	ext3,ext2, vfat, ptfs, msdos, fat, btrfs, bfs, ...  
+### partion type  
 
-## make ext4  
+```bash
+#good for desktop
+ext4
 
-	mkfs -t ext4 /dev/sdb1
-	blkid
-	mkfs.ext4 ===>> after . push two times tab  
-	
-## Mount  
+#good for server and you have alot of inod
+xfs
 
-	mkdir /data_sdb1 ===>> make forlder first every where
-	mount /dev/sdb1 /data_sdb1 ===>> mount new partion
-	umount /dev/sdb1 ===>> unmount	
+ext3,ext2, vfat, ptfs, msdos, fat, btrfs, bfs, ...  
+```
 
-## permanent  
+---  
 
-	ls -l /dev/disk/by-uuid ===>> important find uuid disk
-	vim /etc/fstab ===>> important to set permanent
-		/dev/sdb1 /mnt/...   ext4  defaults 0 0
-		/dev/disk/by-uuid/(uudid disk) /mnt/ ext4 defaults 0 0
-	mount -a ===>> check everything is ok  
+### make ext4  
+
+```bash
+mkfs -t ext4 /dev/sdb1
+
+#show all disk and partion
+blkid
+
+#after . push two times tab
+mkfs.ext4 
+```
+
+---  
+
+### Mount  
+
+```bash
+#make forlder first every where
+mkdir /data_sdb1
+
+#mount new partion
+mount /dev/sdb1 /data_sdb1
+
+#unmount
+umount /dev/sdb1
+```
+
+---  
+
+### permanent
+
+```bash
+ls -l /dev/disk/by-uuid ===>> important find uuid disk
+vim /etc/fstab ===>> important to set permanent
+	/dev/sdb1 /mnt/...   ext4  defaults 0 0
+	/dev/disk/by-uuid/(uudid disk) /mnt/ ext4 defaults 0 0
+mount -a ===>> check everything is ok  
 
 ## example  
 
