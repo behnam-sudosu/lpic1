@@ -144,21 +144,46 @@ umount /dev/sdb1
 ### permanent
 
 ```bash
-ls -l /dev/disk/by-uuid ===>> important find uuid disk
-vim /etc/fstab ===>> important to set permanent
-	/dev/sdb1 /mnt/...   ext4  defaults 0 0
-	/dev/disk/by-uuid/(uudid disk) /mnt/ ext4 defaults 0 0
-mount -a ===>> check everything is ok  
+#important find uuid disk
+ls -l /dev/disk/by-uuid
 
-## example  
+#important to set permanent
+vim /etc/fstab
+	/dev/sdb1						/mnt/...	ext4  		defaults 	0 		0
+	/dev/disk/by-uuid/(uudid disk) /mnt/ 		ext4 		defaults 	0 		0
 
-	/dev/sdb /data_sdb1 ext4 (ro, rw, noexc, defaults) 0 1 
-	(first number ==>> 0 == dosenn't check disk (1== check you disk) (second number ==>> che you have dump)  
+#check everything is ok
+mount -a ===>>   
+```
 
-## check disk  
+---  
 
-	df -h ===>> check your mesure disk
-	df -i ===>> show your inode
-	df -hT ===>> more information
-	df -hti ===>> more information (t=typefile, i=inod)
-	du -sh * ===>> show weght of file  
+### example  
+
+```bash
+/dev/sdb          /data_sdb1      ext4      (ro, rw, noexc, defaults) 	0 	1
+
+first number  0 == dosn't check disk 1== check you disk
+second number 0 == dosn't check disk dump 1== check you disk for dump
+```
+
+---  
+
+### check disk  
+
+```bash
+#check your mesure disk
+df -h
+
+#show your inode
+df -i
+
+#more information
+df -hT
+
+#more information (t=typefile, i=inod)
+df -hti
+
+#show weght of file
+du -sh *
+```
