@@ -1,15 +1,30 @@
 # logshel  
 
-## loginshel  
-	
-	/etc/profile ===>> global
-	/etc/profile.d/*.sh ===>> put script and excute (everyone login email send to me)  
-	
-	/home/behnam/.profile ===>> you can change it in your home
-	/home/behnam/.bashrc ===>> you can set alias here  
-	
-## nonloginshel  
+### loginshel  
 
-	/etc/bash.bashrc
-	/etc/bashrc ===>> centos
-	/home/behnam/.bashrc  
+```bash
+#global
+/etc/profile
+
+#put script and excute (everyone login email send to me)
+/etc/profile.d/*.sh 
+
+#you can change it in your home
+/home/behnam/.profile
+
+#you can set alias here
+/home/behnam/.bashrc
+```
+
+---  
+
+### nonloginshel  
+
+```bash
+/etc/bash.bashrc
+
+#centos
+/etc/bashrc
+
+/home/behnam/.bashrc
+```
