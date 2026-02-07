@@ -4,16 +4,16 @@
 
 ```bash
 myfunction(){
-ls /tmp
-cd /var/log
-touch file1
-cd /root
-ls
+	ls /tmp
+	cd /var/log
+	touch file1
+	cd /root
+	ls
 }  
 ```
 
-put this file here  
-.bashrc  
+#### put this file here  
+#### .bashrc  
 
 ---  
 
@@ -23,7 +23,7 @@ put this file here
 mylist={lets learn linux}
 exho ${mylist[2]}  
 ```
-all we write in script file  
+#### all we write in script file  
 
 ---  
 
@@ -55,7 +55,8 @@ vim file1.sh
  
 
 ```bash
-vim file2.sh  
+vim file2.sh
+
 	echo "Hello World!"
 ```
 
