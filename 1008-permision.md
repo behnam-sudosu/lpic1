@@ -1,53 +1,91 @@
 # permision on file and directory 
 
-## directory  
+#### directory  
 
-	d ===>> directory
-	- ===>> file
-	l ===>> link  
-
-## permision
-	r ===>> read
-	w ===>> write
-	x ===>> excute
-		chmod u+w file1 ===>> u = user
-		chmod u-w file1 ===>> take w from
-		chmod g+wx file1 ===>> g = group
-		chmod o+rwx file1 ===>> o = others
-		chmod u+rwx,g-rx,o-r file1
-		chmod a=wx file1 ===>> a=all
-		chmod all=rwx ===>> all
-		chmod -r or -R ===>> all file in folder  
+```bash
+d ===>> directory
+- ===>> file
+l ===>> link
+```
 
 ---  
 
-	chmod
-	touch file{1..10}.txt
-	chmod -R 777 dir1 ===>> -R = zirmajmoe
-	which passwd ===>> where is passwd command
-				r	w	x
-	permision	4	2	1  
+### permision
 
-## second permison  
+```bash
+r ===>> read
+w ===>> write
+x ===>> excute
+```
 
-	suid ===>> for user
-	guid ===>> for group
-	sdbkit ===>> for owner
-		chmod 4644 file1
-				r	w	x
-	permision	4	2	1
-		s ===>> have x
-		S ===>> dont have x
-	umask ===>> give all permision  
+---  
 
-## group and owner change  
+```bash
+#u = user
+chmod u+w file1
 
-	chown behnam:root file1
-	chown behnam: file1
-	chgroup milad file1
-	which passwd ===>> you can find passwd
-	cat /etc/passwd ===>> show all users
-	cat /etc/group ===>> show all groups  
+#take w from
+chmod u-w file1
+
+#g = group
+chmod g+wx file1
+
+#o = others
+chmod o+rwx file1
+
+
+chmod u+rwx,g-rx,o-r file1
+
+#a=all
+chmod a=wx file1
+
+#all
+chmod all=rwx
+
+#all file in folder
+chmod -r or -R
+```
+---  
+
+```bash
+touch file{1..10}.txt
+
+#-R = parents
+chmod -R 777 dir1 ===>> 
+
+#where is passwd command
+which passwd
+
+			r	w	x
+permision	4	2	1  
+```
+
+---  
+
+### second permison  
+
+```bash
+suid ===>> for user
+guid ===>> for group
+sdbkit ===>> for owner
+chmod 4644 file1
+			r	w	x
+permision	4	2	1
+	s ===>> have x
+	S ===>> dont have x
+umask ===>> give all permision  
+```
+
+---  
+
+### group and owner change  
+
+chown behnam:root file1
+chown behnam: file1
+chgroup milad file1
+which passwd ===>> you can find passwd
+cat /etc/passwd ===>> show all users
+cat /etc/group ===>> show all groups  
 
 ## secure server
 
