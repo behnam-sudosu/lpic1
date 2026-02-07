@@ -104,10 +104,15 @@ fi
 
 ```bash
 -ge ===>> greater or equal
+
 -le ===>> less or equal
+
 -e ===>> equal
+
 ! ===>> not equal
+
 -gt ===>> greater than
+
 -lt ===>> less than
 ```
 
@@ -144,65 +149,65 @@ file7.sh
 
 ```bash
 file7.sh
-	read -s -p "please enter your pass" PASS ===>> -s = dont't show password
-		if test $PASS = reza
-		then
-			echo "welcome"  
-		else
-			echo "access deny"
-		fi
+
+	#-s = dont't show password
+	read -s -p "please enter your pass" PASS
+	if test $PASS = reza
+	then
+		echo "welcome"  
+	else
+		echo "access deny"
+	fi
 ```
 
 ---  
-## for  
 
+### for  
+
+```bash
 	for i in 
 	do
 		command
-	done  
+	done
+```
+
 ---  
-	file8.sh  
 
-			for i in {1..5000}
-		do
-			touch file$1.txt
-		done  
+```bash
+file8.sh  
+
+	for i in {1..5000}
+	do
+		touch file$1.txt
+	done
+```
+
 ---  
-	file9.sh  
 
-			for i in {1..5000}
-		do
-			rm file$1.txt
-		done  
----  			
-	debugging ===>> bash -x file1.sh  	
-	
-	
-	
-	/etc/profiel.d
-	
-	
-	
-	validation ===>> tr
-	
-	
-	./file1
-	bash dile1
-	
-	
-	always check ===>> cron, at, alias, systemd
-	systemd ===>> always program run
-	
-	
-	
-	echo $PATH
-	/usr/local/bin ===>> it's better put script here
-	####################################################
+```bash
+file9.sh  
 
+	for i in {1..5000}
+	do
+		rm file$1.txt
+	done
+```
 
+---  
 
+### more command
 
+```bash
+#bash -x file1.sh
+debugging
 
-	
-	
-	
+#cron, at, alias, systemd
+always check
+
+#always program run
+systemd
+
+echo $PATH
+#it's better put script here
+/usr/local/bin
+```
