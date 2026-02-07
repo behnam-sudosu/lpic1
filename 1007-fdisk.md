@@ -33,32 +33,26 @@ fdisk /dev/sdb
 
 ```bash
 
+	   help		  |    bootable flag	|	see partion		|	  delete		|  list of partion type
+	    m		  |		   a			|		p			|		d			|		 l
+--------------------------------------------------------------------------------------------------------------
+   new partition  |	   primary		    |	extended		|  partition number |  first sector
+	    n	      |		   p			|	    e			|	 (default)		|	  (default)
+--------------------------------------------------------------------------------------------------------------
+	  last		  |	   writeand exit	| quit without save |	GPT create		|  change partion type
+   sector +2G	  |	       w		    |	    q			|		g			|		 t
+--------------------------------------------------------------------------------------------------------------
+show Hex code type|    linux raid 	    |	   linux		|	  linux swap	|	linux lvm
+		L		  |		   fd			|		83			|		82			|		 8e
+```
 
-m ===>> help
-a ===>> bootable flag
-b
-d ===>> delete
-l ===>> list of partion type
-p ===>> see partion and print
-n ===>> new partition
-	p ===>> primary
-	e ===>> extended
-	partition number (default)
-	first sector (default)
-	last sector +2G
-w ===>> write
-q ===>> quit
-g ===>> GPT create
+---  
 
-t ===>> change partion type
-	partition number
-	L ===>> show Hex code type
-	(83) linux
-	(82) linux swap
-	(8e) linux lvm
-	(fd) linux raid
-	<!-- type hex code -->
-	w ===>> save and exit
+```bash
+type hex code
+
+#save and exit
+w
 ```
 
 ## gdisk  
