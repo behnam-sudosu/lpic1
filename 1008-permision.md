@@ -80,17 +80,36 @@ umask ===>> give all permision
 
 ### group and owner change  
 
+```bash
 chown behnam:root file1
 chown behnam: file1
 chgroup milad file1
-which passwd ===>> you can find passwd
-cat /etc/passwd ===>> show all users
-cat /etc/group ===>> show all groups  
 
-## secure server
+#you can find passwd
+which passwd
 
-	find / -perm -u+s > suid8.txt ===>> -u = user
-	find / -perm -g+s > suid8.txt ===>> -g = group
-	find / -perm -u+s > suid7.txt
-	find / -perm -g+s > suid8.txt
-	diff suid7.txt suid8.txt
+#show all users
+cat /etc/passwd
+
+#show all groups
+cat /etc/group
+```
+
+---  
+
+### secure server
+
+```bash
+#-u = user
+find / -perm -u+s > suid8.txt
+
+#-g = group
+find / -perm -g+s > suid8.txt
+
+find / -perm -u+s > suid7.txt
+#after six mounth
+find / -perm -g+s > suid8.txt
+
+#find file why change permission
+diff suid7.txt suid8.txt
+```
