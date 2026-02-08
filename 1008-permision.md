@@ -33,7 +33,6 @@ chmod g+wx file1
 #o = others
 chmod o+rwx file1
 
-
 chmod u+rwx,g-rx,o-r file1
 
 #a=all
@@ -45,7 +44,6 @@ chmod all=rwx
 #all file in folder
 chmod -r or -R
 ```
----  
 
 ```bash
 touch file{1..10}.txt
