@@ -1,33 +1,70 @@
 # users  
 
-	id (name)===>> say id and uid and group id
-	passwd behnam ===>> change password user
-	cat /etc/passwd ===>> show all users
-	cat /etc/shadow ===>> save password here
-	hints: id and user if have 0 can do everything  
+```bash
+id NAME USER ===>> say id and uid and group id
+passwd behnam ===>> change password user
+cat /etc/passwd ===>> show all users
+cat /etc/shadow ===>> save password here
+hint: id and user if have 0 can do everything  
+```
 
-## add user  
-
-	useradd or adduser name ===>> add new user
-	adduser -m ===>> make home directory
-	adduser -d ===>> change home directory
-	adduser -c "behnam" name ===>> make command
-	adduser -s "/bin/bash" ===>> change shell (sh is current)  
 ---  
-	cat /etc/passwd ===>> show users
-	cat /etc/passwd | grep -i behnam ===>> only show behnam   
+
+## add user
+
+```bash
+#add new user
+useradd or adduser NAME
+
+#make home directory
+adduser -m
+
+#change home directory
+adduser -d
+
+#make command
+adduser -c "admin server" NAME
+
+#change shell (sh is current)
+adduser -s "/bin/bash"
+```
+```bash
+#show users
+cat /etc/passwd
+
+#only show behnam 
+cat /etc/passwd | grep -i behnam
+```
+
+---  
 
 ### modified user  
 
-	usermod -c "admin" (name) ===>> set comment
-	usermod -s "/bin.bash" ===> set bash for user
-	usermod -d ===>> change home directory
-	usermod -L (name) ===>> lock the user
-	usermod -U (name) ===>> unlock user (after that reset password)
-	usermod -g adm behnam ===>> change primary group
-	usermod -G sudo behnam ===> join another groups
-	usermod -aG sudo behnam ===>> join user to group sudoers nad append  
+```bash
+#set comment
+usermod -c "admin" NAME
 
+#set bash for user
+usermod -s "/bin.bash"
+
+#change home directory
+usermod -d
+
+#lock the user
+usermod -L NAME
+
+#unlock user (after that reset password)
+usermod -U NAME
+
+#change primary group
+usermod -g adm behnam
+
+#join another groups
+usermod -G sudo behnam
+
+#join user to group sudoers nad append
+usermod -aG sudo behnam 
+```
 #### delete user  
 
 	userdel (behnam) ===>> delete user
