@@ -4,17 +4,17 @@
 
 ```bash
 myfunction(){
-	ls /tmp
-	cd /var/log
-	touch file1
-	cd /root
-	ls
+ls /tmp
+cd /var/log
+touch file1
+cd /root
+ls
 }  
 ```
-
-#### put this file here  
-#### .bashrc  
-
+```bash
+#put this file here  
+.bashrc  
+```
 ---  
 
 ### list(array)  
@@ -23,7 +23,9 @@ myfunction(){
 mylist={lets learn linux}
 exho ${mylist[2]}  
 ```
-#### all we write in script file  
+```bash
+all we write in script file  
+```
 
 ---  
 
