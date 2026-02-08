@@ -10,11 +10,11 @@ hint: id and user if have 0 can do everything
 
 ---  
 
-## add user
+### add user
 
 ```bash
 #add new user
-useradd or adduser NAME
+useradd or adduser NAME-USER
 
 #make home directory
 adduser -m
@@ -23,7 +23,7 @@ adduser -m
 adduser -d
 
 #make command
-adduser -c "admin server" NAME
+adduser -c "admin server" NAME_USER
 
 #change shell (sh is current)
 adduser -s "/bin/bash"
@@ -33,7 +33,7 @@ adduser -s "/bin/bash"
 cat /etc/passwd
 
 #only show behnam 
-cat /etc/passwd | grep -i behnam
+cat /etc/passwd | grep -i NMAE_USER
 ```
 
 ---  
@@ -42,7 +42,7 @@ cat /etc/passwd | grep -i behnam
 
 ```bash
 #set comment
-usermod -c "admin" NAME
+usermod -c "admin" NAME_USER
 
 #set bash for user
 usermod -s "/bin.bash"
@@ -51,53 +51,102 @@ usermod -s "/bin.bash"
 usermod -d
 
 #lock the user
-usermod -L NAME
+usermod -L NAME_USER
 
 #unlock user (after that reset password)
-usermod -U NAME
+usermod -U NAME_USER
 
 #change primary group
-usermod -g adm behnam
+usermod -g adm NAME_USER
 
 #join another groups
-usermod -G sudo behnam
+usermod -G sudo NMAE_USER
 
 #join user to group sudoers nad append
-usermod -aG sudo behnam 
+usermod -aG sudo NAME_USER
 ```
-#### delete user  
 
-	userdel (behnam) ===>> delete user
-	userdel -r (behnam) ===>> user delete with directory home
-	userdel -f behnam ===>> delete file too that make this user  
 ---  
-	cat /etc/sudoers ===>> privilage
-	cat /etc/sudoers.d/(make file name your user)
-		behnam ALL=(ALLNOPASSD:ALL) ===>> no need pasword to root  
+
+### delete user  
+
+```bash
+#delete user
+userdel NAME_USER
+
+#user delete with directory home
+userdel -r NAME_USER
+
+#delete file too that make this user
+userdel -f NAME_USER
+
+#privilage
+cat /etc/sudoers
+
+#make file name your user
+cat /etc/sudoers.d/
+	#no need pasword to root
+	NAME_USER ALL=(ALLNOPASSD:ALL)
+
+
+#add user primary change
+useradd -g group1 NAME_USER
+
+#secandary user add
+useradd -G cdrom NAME_USER
+
+#append
+useradd -aG
+```
+
 ---  
-	useradd -g group1 behnam ===>> add user primary change
-	useradd -G cdrom behnam ===>> secandary user add
-	useradd -aG ===>> append  
 
-## groups  
+### groups  
 
-	cat /etc/group  
-	groupadd soc ===>> make group or add group
-	group -g 1005 group1 ===>> change id and name group
-	gpasswd ===>> set pass on group  
-	
+```bash
+cat /etc/group
+
+#make group or add group
+groupadd soc
+
+#change id and name group
+group -g 1005
+
+#set pass on group
+gpasswd
+```
+
+---  
+
 ### modify group  
 
-	groupmod -n newgroup group1 ===>> change name group1
-	groupmod -g 1010 newgroup ===>> change id  
+```bash
+#change name group1
+groupmod -n newgroup group1
+
+#change id
+groupmod -g 1010 newgroup 
+```
+
+---  
+
 
 ### delete group  
 
-	groupdel group1 ===>> delete group  
+```bash
+#delete group
+groupdel group1
+```
 
-## more information about user  
-
-	chage -l behnam ===>> show information behnam and last modify
-	chage behnam  
 ---  
-	getent passwd behnam ===>> like a grep in file passwd  
+
+### more information about user  
+
+```bash
+#show information behnam and last modify
+chage -l NAME_USER
+chage NAME_USER 
+
+#like a grep in file passwd
+getent passwd NAME_USER
+```
