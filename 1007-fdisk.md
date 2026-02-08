@@ -29,8 +29,6 @@ mount
 fdisk /dev/sdb
 ```
 
----  
-
 ```bash
 
 	   help		  |    bootable flag	|	see partion		|	  delete		|  list of partion type
@@ -45,8 +43,6 @@ fdisk /dev/sdb
 show Hex code type|    linux raid 	    |	   linux		|	  linux swap	|	linux lvm
 		L		  |		   fd			|		83			|		82			|		 8e
 ```
-
----  
 
 ```bash
 type hex code
@@ -63,8 +59,6 @@ w
 #can orginize you disk
 gdisk /dev/sdb
 ```
-
----  
 
 ```bash
 #help
@@ -153,7 +147,7 @@ vim /etc/fstab
 	/dev/disk/by-uuid/(uudid disk) /mnt/ 		ext4 		defaults 	0 		0
 
 #check everything is ok
-mount -a ===>>   
+mount -a
 ```
 
 ---  
