@@ -4,12 +4,12 @@
 
 ```bash
 myfunction(){
-ls /tmp
-cd /var/log
-touch file1
-cd /root
-ls
-}  
+	ls /tmp
+	cd /var/log
+	touch file1
+	cd /root
+	ls
+} 
 ```
 ```bash
 #put this file here  
@@ -41,8 +41,6 @@ chmod +x file1.sh
 # function
 # list
 ```
----  
-
 ```bash
 vim file1.sh
 
@@ -52,18 +50,11 @@ vim file1.sh
 	VAR1="behnam"
 	echo $VAR1  
 ```
-
-  
- 
-
 ```bash
 vim file2.sh
 
 	echo "Hello World!"
 ```
-
----  
-
 ```bash
 vim file3.sh  
 
@@ -71,9 +62,6 @@ vim file3.sh
 	echo "lets \tlearn \tlinx"
 	echo "lets \vlearn \vlinx"
 ```
-
----  
-
 ```bash
 file4.sh  
 
@@ -81,9 +69,6 @@ file4.sh
 	sudo apt update && sudo apt upgrade
 	touch file1 || touch file2
 ```
-
----  
-
 ```bash
 file5.sh  
 
@@ -102,9 +87,6 @@ elif
 else
 fi  
 ```
-
----  
-
 ```bash
 -ge ===>> greater or equal
 
@@ -118,9 +100,6 @@ fi
 
 -lt ===>> less than
 ```
-
----  
-
 ```bash
 file6.sh  
 
@@ -133,9 +112,6 @@ file6.sh
 		echo "number is nagative"
 	fi  
 ```
-
----  
-
 ```bash
 file7.sh  
 
@@ -147,9 +123,6 @@ file7.sh
 		echo "access deny"
 	fi
 ```
-
----  
-
 ```bash
 file7.sh
 
@@ -173,9 +146,6 @@ file7.sh
 		command
 	done
 ```
-
----  
-
 ```bash
 file8.sh  
 
@@ -184,9 +154,6 @@ file8.sh
 		touch file$1.txt
 	done
 ```
-
----  
-
 ```bash
 file9.sh  
 
