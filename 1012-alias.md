@@ -23,7 +23,9 @@ alias mn = 'cd /tmp; ls -l'
 sources .bashrc
 ```
 
-## make file
+---  
+
+### make file
 
 ```bash
 #this can help sepreate you alias
