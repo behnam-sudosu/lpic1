@@ -1,25 +1,21 @@
 # permision on file and directory 
 
-#### directory  
+### permision
 
 ```bash
+informastion
+
 d ===>> directory
 - ===>> file
 l ===>> link
 ```
-
----  
-
-### permision
-
 ```bash
+permission
+
 r ===>> read
 w ===>> write
 x ===>> excute
 ```
-
----  
-
 ```bash
 #u = user
 chmod u+w file1
@@ -49,7 +45,7 @@ chmod -r or -R
 touch file{1..10}.txt
 
 #-R = parents
-chmod -R 777 dir1 ===>> 
+chmod -R 777 dir1
 
 #where is passwd command
 which passwd
@@ -66,9 +62,11 @@ permision	4	2	1
 suid ===>> for user
 guid ===>> for group
 sdbkit ===>> for owner
+
 chmod 4644 file1
 			r	w	x
 permision	4	2	1
+
 	s ===>> have x
 	S ===>> dont have x
 umask ===>> give all permision  
@@ -104,10 +102,12 @@ find / -perm -u+s > suid8.txt
 #-g = group
 find / -perm -g+s > suid8.txt
 
-find / -perm -u+s > suid7.txt
-#after six mounth
-find / -perm -g+s > suid8.txt
+#make dif
+	find / -perm -u+s > suid7.txt
 
-#find file why change permission
-diff suid7.txt suid8.txt
+	#after six mounth
+	find / -perm -g+s > suid8.txt
+	
+	#find file why change permission
+	diff suid7.txt suid8.txt
 ```
