@@ -64,6 +64,15 @@ usermod -G sudo NMAE_USER
 
 #join user to group sudoers nad append
 usermod -aG sudo NAME_USER
+
+#add user primary change
+useradd -g group1 NAME_USER
+
+#secandary user add
+useradd -G cdrom NAME_USER
+
+#append
+useradd -aG
 ```
 
 ---  
@@ -79,24 +88,6 @@ userdel -r NAME_USER
 
 #delete file too that make this user
 userdel -f NAME_USER
-
-#privilage
-cat /etc/sudoers
-
-#make file name your user
-cat /etc/sudoers.d/
-	#no need pasword to root
-	NAME_USER ALL=(ALLNOPASSD:ALL)
-
-
-#add user primary change
-useradd -g group1 NAME_USER
-
-#secandary user add
-useradd -G cdrom NAME_USER
-
-#append
-useradd -aG
 ```
 
 ---  
@@ -139,6 +130,20 @@ groupdel group1
 ```
 
 ---  
+
+### privilage
+
+```bash
+cat /etc/sudoers
+
+#make file name your user
+cat /etc/sudoers.d/
+	#no need pasword to root
+	NAME_USER ALL=(ALLNOPASSD:ALL)
+```
+
+---  
+
 
 ### more information about user  
 
