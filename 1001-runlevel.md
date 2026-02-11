@@ -29,7 +29,7 @@ init 5
 
 ---  
 
-#### change and edit grub  
+#### change and edit grub directory
 
 	/etc/default/grub  
 	/etc/grub.d
@@ -55,4 +55,31 @@ etc/init.d
 
 #### you can stop, start, reload, enable, disable  
 
-	/etc/init.d/lvm start  
+	/etc/init.d/lvm start
+
+#### command
+
+```bash
+#show all start and kill service
+chkocfig --list
+
+#reload all service
+systemctl daemon-reload
+```
+
+---  
+
+#### save systemd file directory
+
+```bash
+#first direction save systemd  
+/etc/systemd/system  
+	#name service with .service
+	file.service
+
+
+#second directory save systemd  
+/usr/lib/systemd/system  
+	#name service with .service  
+	file.service  
+```
