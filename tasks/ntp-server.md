@@ -1,36 +1,55 @@
 # NTP server  
 
-## server  
+### server  
 
-    apt install ntpdate ===>> befor install ntp
-    ntpdate -v pool.ntp.org
-    ir.pool.ntp.org  
+```bash
+ntp ===>> network time protocol
+site = ntppool.org ===>> you can use this site for set time
+
+#befor install ntp
+apt install ntpdate
+ntpdate -v pool.ntp.org
+ir.pool.ntp.org
+```
 
 ---      
 
-    apt update && apt install ntp
-    apt install chrony ===>> same as ntp
-    apt install ntpsec ===>> in debian
+### install
+
+```bash
+apt update && apt install ntp
+
+#same as ntp
+apt install chrony
+
+#in debian
+apt install ntpsec
+```
 
 ---  
 
-    systemctl status ntp.service
-    ntpq -p ===>> show information
-    vim /etc/ntp.conf
-        pool 192.168.1.100 iburst
-        pool ir.pool.ntp.org iburst
-    systemctl restart ntp  
+### config file
 
-## client  
+```bash
+systemctl status ntp.service
 
-    apt update && apt install ntp
-    vim /etc/ntp.conf
-        poll 0.ubuntu.pool.ntp.org iburst
-        pool 192.168.1.100 iburst
-    systemctl restart ntp
-    ntpq -p
+#show information
+ntpq -p
+vim /etc/ntp.conf
+    pool 192.168.1.100 iburst
+    pool ir.pool.ntp.org iburst
+systemctl restart ntp  
+```
 
 ---  
 
-    ntp ===>> network time protocol
-	site = ntppool.org ===>> you can use this site for set time  
+### client  
+
+```bash
+apt update && apt install ntp
+vim /etc/ntp.conf
+    poll 0.ubuntu.pool.ntp.org iburst
+    pool 192.168.1.100 iburst
+systemctl restart ntp
+ntpq -p
+```
