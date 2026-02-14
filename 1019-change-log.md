@@ -1,12 +1,13 @@
 # change log directory  
 
-    vim /etc/logrotate.conf
-    vim /etc/logrotate.d
-    vim /etc/logrotate.d/nginx
-        /var/log/nginx/*.log ===>> show where log is saved
-        daily
-        rotate 14
-        compress
-        
+```bash
+vim /etc/logrotate.conf
+vim /etc/logrotate.d
+vim /etc/logrotate.d/nginx
 
-    
+#show where log is saved
+/var/log/nginx/*.log
+daily
+rotate 14
+compress
+``` 
