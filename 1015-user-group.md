@@ -64,15 +64,6 @@ usermod -G sudo NMAE_USER
 
 #join user to group sudoers nad append
 usermod -aG sudo NAME_USER
-
-#add user primary change
-useradd -g group1 NAME_USER
-
-#secandary user add
-useradd -G cdrom NAME_USER
-
-#append
-useradd -aG
 ```
 
 ---  
