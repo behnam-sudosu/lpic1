@@ -111,3 +111,12 @@ find / -perm -g+s > suid8.txt
 	#find file why change permission
 	diff suid7.txt suid8.txt
 ```
+
+---  
+
+# sodoer  
+
+```bash
+/etc/sudoers.d
+    behnam ALL=(ALL) NOPASSWD:ALL
+```
