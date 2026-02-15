@@ -19,6 +19,15 @@ DNS server ===>> change IP to name
 
 ---  
 
+### host
+
+```bash
+host ===>> go and ask what is the ip of google.com
+host yahoo.com ===>> show IP
+```
+
+---  
+
 ### commands  
 
 ```bash
@@ -68,90 +77,109 @@ ip addr add 192.168.1.100/24 dev ens37 ===>> add ip
 ip addr del 192.168.1.100/24 dev ens37 ===>> delete ip
 ```
 ```bash  
-	ip link show ===>> show disable and enable
-	ip link set ens37 down
-	ip link setens37 up  
+ip link show ===>> show disable and enable
+ip link set ens37 down
+ip link setens37 up  
 ```
- 
-
-	ip route show
-	ip ro sh
-	ip r s
-	ip route add 10.0.0.0 via 172.160.100 dev ens37
-	ip route del 10.0.0.0 via 172.160.100 dev ens37
-	ip route add default via 192.168.1.1 dev ns37
-	ip route del default via 192.168.1.1 dev ns37  
-	
-## ping  
-
-	apt install iputils-ping
-	ping google.com
-	ping 8.8.8.8
-	ping -c 3
-	ping -i 0.5 ===>> second
-	ping -I ens37 ===>> choose interface give me ping
-	ping -a  ===>> alarm
-	ping -s ===>> size  
-
-## troubleshoot  
-
-	traceroute ===>> show path
-	traceroute 8.8.8.8
-	tracepath ===>> show path
-	tracepath 8.8.8.8
-	mtr ===>> show path
-	mtr yahoo.com  
-
-## netstat  
-
-	ESTABLISHED ===>> conected
-	LISTEN ===>> ready for connect  
+```bash
+ip route show
+ip ro sh
+ip r s
+ip route add 10.0.0.0 via 172.160.100 dev ens37
+ip route del 10.0.0.0 via 172.160.100 dev ens37
+ip route add default via 192.168.1.1 dev ns37
+ip route del default via 192.168.1.1 dev ns37  
+```
 
 ---  
 
-	netstat ===>> show all connection in your network
-	netstat ===>> show network connection
-	netstat -a ===>> all
-	netstat -at ===>> tcp
-	netstat -au ===>> udp
-	netstat -l ===>> list
-	netstat -n ===>> port number
-	netstat -p ===>> pid  
-	netstat -rn = like a route -n  
+### ping  
 
-## ss  
+```bash
+apt install iputils-ping
+ping google.com
+ping 8.8.8.8
+ping -c 3
+ping -i 0.5 ===>> second
+ping -I ens37 ===>> choose interface give me ping
+ping -a  ===>> alarm
+ping -s ===>> size  
+```
 
-	ss -a ===>> all
-	ss -at ===>> tcp
-	ss -au ===>> udp
-	ss -l ===>> list
-	ss -n ===>> port
-	s -p ===>> pid  
+---  
 
-## telnet  
+### troubleshoot  
 
-	telnet 192.168.1.100 22 ===>> show port 22 is exist or open on server
-	netcat -l 8080 ===>> you can open port (server)
-	telnet 192.168.1.100 8080 ===>> connect to server port
-	telnet google.com 80  
+```bash
+traceroute ===>> show path
+traceroute 8.8.8.8
+tracepath ===>> show path
+tracepath 8.8.8.8
+mtr ===>> show path
+mtr yahoo.com  
+```
 
-## nslookup  
+---  
 
-	nslookup ===>> go and ask what is the ip of google.com
-	nslookup @8.8.8.8.8 google.com
-	nslookup
-		server 1.1.1.1 ===>> change dafault nslookup server
-		8.8.8.8
-		google.com  
+### netstat  
 
-## dig  
+```bash
+ESTABLISHED ===>> conected
+LISTEN ===>> ready for connect  
+```
+```bash
+netstat ===>> show all connection in your network
+netstat ===>> show network connection
+netstat -a ===>> all
+netstat -at ===>> tcp
+netstat -au ===>> udp
+netstat -l ===>> list
+netstat -n ===>> port number
+netstat -p ===>> pid  
+netstat -rn = like a route -n  
+```
+### ss  
 
-	dig ===>> go and ask what is the ip of google.com
-	dig yahoo.com
-	dig nginx.com
-	dig yahoo.com +short ===>> only show IP without information  
+```bash
+ss -a ===>> all
+ss -at ===>> tcp
+ss -au ===>> udp
+ss -l ===>> list
+ss -n ===>> port
+s -p ===>> pid  
+```
 
-## host
+---  
 
-	host ===>> go and ask what is the ip of google.com
-	host yahoo.com ===>> show IP  
+### telnet  
+
+```bash
+telnet 192.168.1.100 22 ===>> show port 22 is exist or open on server
+netcat -l 8080 ===>> you can open port (server)
+telnet 192.168.1.100 8080 ===>> connect to server port
+telnet google.com 80  
+```
+
+---  
+
+### nslookup  
+
+```bash
+nslookup ===>> go and ask what is the ip of google.com
+nslookup @8.8.8.8.8 google.com
+nslookup
+	server 1.1.1.1 ===>> change dafault nslookup server
+	8.8.8.8
+	google.com  
+```
+
+---  
+
+### dig  
+
+```bash
+dig ===>> go and ask what is the ip of google.com
+dig yahoo.com
+dig nginx.com
+dig yahoo.com +short ===>> only show IP without information  
+```
