@@ -1,17 +1,17 @@
 
 ## bash script advance  
 
-	echo "Hello world!"
-	touch app.sh ===>> pasfand must be (sh)
-	chmod +x (name file)
+echo "Hello world!"
+touch app.sh ===>> pasfand must be (sh)
+chmod +x (name file)
 open file with vim
-	#!/bin/bash ===>> start file with this command
-	#!/usr/bin/ env bash ===>> use this is better
+#!/bin/bash ===>> start file with this command
+#!/usr/bin/ env bash ===>> use this is better
 excute file
-	1---->> ./(name file)
-	2---->> /bin/bash (name file)
-	3---->> bash (name file)
-	4---->> sh (name file)
+1---->> ./(name file)
+2---->> /bin/bash (name file)
+3---->> bash (name file)
+4---->> sh (name file)
 
 app.sh	
 	v1=world
