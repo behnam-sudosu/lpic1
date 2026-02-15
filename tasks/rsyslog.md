@@ -1,0 +1,60 @@
+# rsyslog  
+
+## server  
+
+    sudo apt update && sudo apt install rsyslog
+    rsyslogd -v ===>> show more information
+    systemctl status rsyslog
+    sudo systemctl start rsyslog
+    sudo vim /etc/rsyslog.conf
+        # provides UDP syslog reception
+        #module(load="imudp")
+        #input(type="imudp" port="514")
+
+        # provides TCP syslog reception
+        #module(load="imtcp")
+        #input(type="imtcp" port="514")
+        uncomment TCP and UDP  
+
+---  
+
+    sudo ufw allow 514/tcp
+    sudo systemctl restart rsyslog.service  
+
+## client  
+
+    sudo apt update && sudo apt install rsyslog
+    rsyslogd -v ===>> show more information
+    systemctl status rsyslog
+    sudo systemctl start rsyslog
+    sudo vim /etc/rsyslog.d/50-default.conf
+        *.* @@0.0.0.0:514
+        *.* @@192.168.122.235
+        cron.* @@192.168.122.237:514  
+
+---  
+
+    sudo systemctl restart rsyslog.service  
+
+## test  
+
+    logger 'test from client'
+    sudo tail /var/log/syslog  
+
+## ELK  
+
+    elastic search log stash kibana
+    vim /etc/logrotate.conf  
+
+
+############################################
+# make file  
+
+    sudo touch /var/log/cron.log
+    sudo chmod 640 /var/log/cron.log
+    sudo chown syslog:adm /var/log/cron.log
+
+    sudo systemctl restart rsyslog
+
+    sudo vim /etc/rsyslog.d/50-default.conf
+    cron.* ===>> /var/log/cron.log  
