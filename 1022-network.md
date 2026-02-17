@@ -10,8 +10,8 @@ IP ===>> internet protocol
 ```bash
 vim /etc/netplan/*.yaml
 
-network:
-ethernets:
+	network:
+	ethernets:
 	ens33:
 		dhcp4: false
 		addresses:
@@ -20,7 +20,7 @@ ethernets:
 		gateway4: 192.168.80.2
 		nameservers:
 			addresses: [8.8.8.8, 4.2.2.4]
-version: 2
+	version: 2
 ```
 
 ---  
