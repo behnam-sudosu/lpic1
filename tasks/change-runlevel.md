@@ -12,8 +12,9 @@ GRUB_CMDLINE_LINUX=""
 #never use 0 because if use 0 before come os up is go to the hal
 #nver use 0 because if use 6 after come up os reboot system again and again
 ```
-#### save the file
-
+```bash
+save the file
+```
 ---  
 
 ### commands

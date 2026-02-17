@@ -3,31 +3,38 @@
 ### tmux help you if disconnect from server  
 
 ```bash
+#install tmux
 sudo apt install tmux
+
+#run tmux
 tmux
+
 #after log out
 #show how many window is open
-tmux ls
 #you can see you tmux session
+tmux ls
 
 #you can conect two people, 0 = which window is open
 tmux att -t NUMBER OF SISSION
 tmux new
 tmux new-session
-tmux kill-session -t namesession
+tmux kill-session -t NAME_SESSION
 
 #close tmux
 #exit
 ctrl + d
 ```
-### note: you can use it for ping to check ping if you have packet lost
-### note: bring someone on server and teach them
+```bash
+note: you can use it for ping to check ping if you have packet lost
+note: bring someone on server and teach them
+```
 
 # byobu  
 
 ### byobu help you if disconnect from server  
 
 ```bash
+#install byobu
 sudo apt install byobu
 byobu
 
